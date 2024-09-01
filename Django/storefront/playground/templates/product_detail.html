@@ -1,0 +1,5 @@
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<p>Price: ${{ product.price }}</p>
+<p>In stock: {{ product.stock }}</p>
+<p>{{ product.available|yesno:"Available,Out of stock" }}</p>
