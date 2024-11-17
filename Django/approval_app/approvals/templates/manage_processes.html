@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Manage Processes, Codes, and Approval Levels</h2>
+
+<h3>Add New Process</h3>
+<form method="post" action="{% url 'manage_processes' %}">
+    {% csrf_token %}
+    {{ process_form.as_p }}
+    <button type="submit">Add Process</button>
+</form>
+
+<hr>
+
+<h3>Add New Process Code</h3>
+<form method="post" action="{% url 'manage_processes' %}">
+    {% csrf_token %}
+    {{ code_form.as_p }}
+    <button type="submit">Add Process Code</button>
+</form>
+
+<hr>
+
+<h3>Add New Approval Level</h3>
+<form method="post" action="{% url 'manage_processes' %}">
+    {% csrf_token %}
+    {{ level_form.as_p }}
+    <button type="submit">Add Approval Level</button>
+</form>
+
+<hr>
+
+
+{% endblock %}
